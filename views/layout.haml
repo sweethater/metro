@@ -1,0 +1,40 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title Metro
+
+    %link{:href => "/css/metro.css", :rel => "stylesheet"}
+    %link{:href => "css/bounce-nav.css", :rel => "stylesheet"}
+
+    %link{:href => "/images/favicon.png", :rel => "icon", :type => "image/png"}
+
+    %script{:src => "/js/jquery-2.1.0.js", :type => "text/javascript"}
+
+    %script{:src => "/js/metro.js", :type => "text/javascript"}
+    %script{:src => "/js/mixitup.js", :type => "text/javascript"}
+
+  %body
+    %a.to_index{:href => "/"}
+      %img.layout-logo{:src=> "img/metro-logo.png"}
+
+    %section.cd-section
+      %a.cd-bouncy-nav-trigger{:href => "#0"} Kategorie
+    .pulse_rays
+
+    .cd-bouncy-nav-modal
+      %nav
+        %ul.cd-bouncy-nav
+          %li
+            %a.search{:href => "/search"} Prehlad vín
+          %li
+            %a.salles{:href => "/salles"} Akcie
+          %li
+            %a.about{:href => "/about"} O víne
+          %li
+            %a.recepies{:href => "/recepies"} Recepty
+
+      %a.cd-close{:href => "#0"} Zatvoriť
+
+    = yield
+
